@@ -101,11 +101,11 @@ footer {
         width: auto;
         padding: 20px;
     }
-    /*  */
+    /* Vertikalt flöde: först .innehall sen aside under */
     main {
         flex-direction: column;
     }
-    /*  */
+    /* Återställ bredderna till fri */
     header, .innehall, aside, footer {
         width: auto;
     }
