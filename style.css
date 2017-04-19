@@ -1,0 +1,238 @@
+@import url(http://fonts.googleapis.com/css?family=Sonsie+One);
+
+/*******************************************************
+Reset-regel
+*******************************************************/
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
+dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+img, fieldset {
+	border: 0;
+}
+
+/* Bilders bredd till 100% */
+img {
+	width: 100%;
+}
+
+/* Alla html5 elements till block. Fix för IE. */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+
+/*******************************************************
+Allmänna styling regler
+*******************************************************/
+body {
+	background: url(http://upload.wikimedia.org/wikipedia/commons/3/36/FRIM_canopy.JPG); /* sidans bakgrundsbild */
+	background-attachment: fixed;
+	font: .81em/150% 'Open sans', Helvetica, sans-serif;
+	color: #666;
+}
+
+/* Utseende på länkar */
+a {
+	color: #026acb;
+	text-decoration: none;
+	outline: none;
+}
+
+/* Utseende på textstycken */
+p {
+	margin: 0 0 1.2em;
+	padding: 0;
+}
+
+/* Utseende på listor */
+ul, ol {
+	margin: 1em 0 1.4em 24px;
+	padding: 0;
+	line-height: 140%;
+}
+li {
+	margin: 0 0 .5em 0;
+	padding: 0;
+}
+
+/* Utseende på rubriker */
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4em;
+	margin: 20px 0 .4em;
+	color: #000;
+}
+
+/**********************************************************
+Sidans layout, bredd och placering
+***********************************************************/
+.kontainer {
+	width: 960px;
+	margin: 0 auto;
+    display: flex; /* Aktivera flexbox */
+    min-height: 100vh; /* kontainer är lika stor webbläsarens inre höjd */
+    flex-direction: column; /* Vertikalt flöde: överst header, sen main och längst ned footer */
+}
+header {
+    margin-top: 30px;
+}
+main {
+    display: flex; /* Aktivera flexbox */
+    flex-direction: row; /* Horisontellt flöde: .innehall och aside brevid varandra */
+    justify-content: space-between; /* Sprid ut .innehall till vänster och aside till höger med ett mellanrum emellan */
+}
+.innehall {
+    width: 650px;
+}
+aside {
+	width: 280px;
+}
+footer {
+    margin-bottom: 30px;
+}
+
+/* För mindre skärmar gör innehållets layout vertikal */
+@media (max-width: 1000px) {
+    /* Återställ hela bredden till fri */
+    .kontainer {
+        width: auto;
+        padding: 20px;
+    }
+    /*  */
+    main {
+        flex-direction: column;
+    }
+    /*  */
+    header, .innehall, aside, footer {
+        width: auto;
+    }
+}
+
+/*******************************************************
+Sidans rubrik
+*******************************************************/
+header h1 {
+	font-family: 'Sonsie One', cursive; /* typsnitt */
+	font-size: 48px; /* textstorlek */
+	color: #fff; /* textfärg */
+	text-shadow: 0 -2px 0 rgba(0,0,0,.5);
+}
+
+/* Utseende på beskrivningstexten */
+header h2 {
+	font-family: 'Sonsie One', cursive; /* typsnitt */
+	font-size: 18px; /* textstorlek */
+	color: #fff; /* textfärg */
+	margin: 0;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+/******************************************************
+Sidans meny
+*******************************************************/
+header ul {
+	width: 100%;
+	background: #ccc;
+	margin: 20px 0;
+	padding: 0;
+	background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C */
+	border-radius: 5px; /* runda hörn */
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 1px rgba(0,0,0,.4); /* skugga */
+}
+header li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+header li:first-child {
+	margin-left: 10px;
+}
+header nav a {
+	line-height: 100%;
+	font-weight: bold;
+	color: #fff; /* textfärg */
+	display: block;
+	padding: 14px 15px;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+/* Menyn när du för muspekaren över */
+header nav a:hover {
+	color: #fff; /* textfärg */
+	background: linear-gradient(to bottom,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* W3C */
+
+}
+/* Menyn för vald sida */
+header nav .aktiv {
+	color: #fff; /* textfärg */
+	background: linear-gradient(to bottom, #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* W3C */
+}
+
+/******************************************************
+Sidan innehåll
+*******************************************************/
+
+/* Utseende på inlägg */
+article {
+	margin-bottom: 40px;
+	background: #fff; /* bakgrundsfärg*/
+	padding: 20px 35px;
+	border-radius: 8px; /* runda hörn */
+	box-shadow: 0 1px 3px rgba(0,0,0,.4); /* skugga */
+}
+article h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	color: #575757; /* textfärg */
+}
+article .datum {
+	margin: 0 0 20px;
+	font-size: 90%;
+}
+
+/* Utseende på bilder i inlägget */
+article .bild {
+	margin: 0 0 15px;
+	padding: 25px;
+	border: 1px solid #AAA;
+	text-align: center;
+	display: inline-block;
+}
+
+/*******************************************************
+Sidans sidkolumn
+*******************************************************/
+.ruta {
+	background: #fff;
+	margin: 0 0 30px;
+	padding: 10px 20px;
+	border-radius: 8px; /* Runda hörn */
+	box-shadow: 0 1px 3px rgba(0,0,0,.4); /* Skugga */
+}
+.ruta h4 {
+	margin: 0 0 5px;
+	padding: 0;
+	color: #575757; /* textfärg */
+}
+.ruta p {
+
+}
+
+/*******************************************************
+Sidans sidfot
+*******************************************************/
+footer {
+    background: rgba(255, 255, 255, 0.3); /* bakgrundsfärg*/
+	padding: 20px 35px;
+	border-radius: 8px; /* runda hörn */
+	color: #FFF; /* textfärg */
+	font-size: 85%;
+}
+footer a {
+	color: #555; /* textfärg */
+}

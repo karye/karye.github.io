@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="">
+    <title>Min Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Webbplatser</h1>
-    <ol>
-        <li><a href="#">Plats 1</a></li>
-        <li><a href="#">Plats 2</a></li>
-        <li><a href="#">Plats 3</a></li>
-        <li><a href="#">Plats 4</a></li>
-    </ol>
+    <div class="kontainer">
+        <header>
+            <hgroup>
+                <h1>Portfolio</h1>
+                <h2>I djurens rike</h2>
+            </hgroup>
+
+            <nav>
+                <ul>
+                    <li><a class="aktiv" href="sida1.html">Bilder</a></li>
+                    <li><a href="sida2.html">Animationer</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="innehall">
+                <article>
+                    <h3>Macaque selfie</h3>
+                    <p class="datum">Oktober 2014</p>
+                    <figure class="bild">
+                        <img src="http://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg" alt="Macaque in the trees">
+                        <figcaption>
+                            En fräck macaque apa, Kintaganban floden, Borneo.
+                        </figcaption>
+                    </figure>
+                    <p>Beskriv vad som gick bra och mindre bra.</p>
+                    <p>Beskriv hur du kan förbättra dina arbeten och hur du utvecklats.</p>
+                </article>
+            </div>
+
+            <aside>
+                <section class="ruta">
+                    <h4>Ett år med webbutveckling</h4>
+                    <p>Beskriv din utveckling.</p>
+                    <p>Motivera och jämföra verktyg och metoder. Förklara hur du tänker.</p>
+                </section>
+            </aside>
+        </main>
+
+        <footer>
+            <p>CC 2017</p>
+        </footer>
+    </div>
 </body>
+
 </html>
