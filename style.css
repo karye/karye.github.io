@@ -98,19 +98,18 @@ footer {
 /*******************************************************
 Sidans rubrik
 *******************************************************/
-header h1 {
-	font-family: 'Sonsie One', cursive; /* typsnitt */
-	font-size: 4em; /* textstorlek */
+header hgroup {
+    font-family: 'Sonsie One', cursive; /* typsnitt */
 	color: #fff; /* textfärg */
+}
+header h1 {
+	font-size: 4em; /* textstorlek */
 	text-shadow: 0 -2px 0 rgba(0,0,0,.5);
 }
 
 /* Utseende på beskrivningstexten */
 header h2 {
-	font-family: 'Sonsie One', cursive; /* typsnitt */
-	font-size: 2em; /* textstorlek */
-	color: #fff; /* textfärg */
-	margin: 0;
+	font-size: 1.5em; /* textstorlek */
 	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 }
 
@@ -118,17 +117,12 @@ header h2 {
 Sidans meny
 *******************************************************/
 header ul {
-	width: 100%;
-	background: #ccc;
 	margin: 20px 0;
-	padding: 0;
 	background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C */
 	border-radius: 5px; /* runda hörn */
 	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 1px rgba(0,0,0,.4); /* skugga */
 }
 header li {
-	margin: 0;
-	padding: 0;
 	list-style: none;
 	display: inline-block;
 }
@@ -136,23 +130,20 @@ header li:first-child {
 	margin-left: 10px;
 }
 header nav a {
-	line-height: 100%;
 	font-weight: bold;
 	color: #fff; /* textfärg */
-	display: block;
-	padding: 14px 15px;
+	display: inline-block;
+	padding: 10px 15px;
 	text-decoration: none;
 	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 }
 /* Menyn när du för muspekaren över */
 header nav a:hover {
-	color: #fff; /* textfärg */
 	background: linear-gradient(to bottom,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* W3C */
 
 }
 /* Menyn för vald sida */
 header nav .aktiv {
-	color: #fff; /* textfärg */
 	background: linear-gradient(to bottom, #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* W3C */
 }
 
@@ -212,7 +203,8 @@ Sidans sidfot
 footer {
     background: rgba(255, 255, 255, 0.3); /* bakgrundsfärg*/
 	padding: 20px 35px;
-	border-radius: 8px; /* runda hörn */
 	color: #FFF; /* textfärg */
     text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    border-radius: 8px; /* runda hörn */
+    border: 1px solid rgba(255, 255, 255, 0.51);
 }
