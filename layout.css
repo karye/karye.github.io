@@ -5,23 +5,31 @@ Sidans layout, bredd och placering
 .kontainer {
     width: 960px;
     margin: 0 auto;
-    display: flex;
+
     /* Aktivera flexbox */
+    display: flex;
+
+    /* kontainer är lika stor som webbläsarens inre höjd */
     min-height: 100vh;
-    /* kontainer är lika stor webbläsarens inre höjd */
-    flex-direction: column;
+
     /* Vertikalt flöde: överst header, sen main och längst ned footer */
+    flex-direction: column;
 }
 header {
     margin-top: 30px;
 }
 main {
-    display: flex;
+    /* Gör så att main strechas ut för att få footer sticky i botten på sidan */
+    flex-grow: 1;
+
     /* Aktivera flexbox */
-    flex-direction: row;
+    display: flex;
+
     /* Horisontellt flöde: .innehall och aside brevid varandra */
-    justify-content: space-between;
+    flex-direction: row;
+
     /* Sprid ut .innehall till vänster och aside till höger med ett mellanrum emellan */
+    justify-content: space-between;
 }
 .innehall {
     width: 650px;
@@ -49,15 +57,14 @@ footer {
 
 /* För mindre skärmar gör innehållets layout vertikal */
 @media (max-width: 650px) {
+
     /* Vertikalt flöde: först .innehall sen aside under */
     main {
         flex-direction: column;
     }
+
     /* Återställ bredderna till fri */
-    header,
-    .innehall,
-    aside,
-    footer {
+    header, .innehall, aside, footer {
         width: auto;
     }
 }
