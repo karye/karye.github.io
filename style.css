@@ -16,81 +16,112 @@ img, fieldset {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
 	display: block;
 }
-
 /*******************************************************
 Allmänna styling regler
 *******************************************************/
+
 body {
-	background: url(http://upload.wikimedia.org/wikipedia/commons/3/36/FRIM_canopy.JPG); /* sidans bakgrundsbild */
-	background-attachment: fixed;
-	font: .81em/150% 'Open sans', Helvetica, sans-serif;
-	color: #666;
+    background: url(http://upload.wikimedia.org/wikipedia/commons/3/36/FRIM_canopy.JPG);
+    /* sidans bakgrundsbild */
+    background-attachment: fixed;
+    font: .81em/150% 'Open sans', Helvetica, sans-serif;
+    color: #666;
 }
 
 /* Utseende på rubriker */
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     line-height: 1.6em;
 }
 
 /* Utseende på länkar */
+
 a {
-	color: #026acb;
-	text-decoration: none;
-	outline: none;
+    color: #026acb;
+    text-decoration: none;
+    outline: none;
 }
 
 /* Utseende på textstycken */
+
 p {
-	margin: 0 0 1.2em;
-	padding: 0;
+    margin: 0 0 1.2em;
+    padding: 0;
 }
 
 /* Bilders bredd till 100% */
+
 img {
-	width: 100%;
+    width: 100%;
 }
 
 /**********************************************************
 Sidans layout, bredd och placering
 ***********************************************************/
+
 .kontainer {
-	width: 960px;
-	margin: 0 auto;
-    display: flex; /* Aktivera flexbox */
-    min-height: 100vh; /* kontainer är lika stor webbläsarens inre höjd */
-    flex-direction: column; /* Vertikalt flöde: överst header, sen main och längst ned footer */
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    /* Aktivera flexbox */
+    min-height: 100vh;
+    /* kontainer är lika stor webbläsarens inre höjd */
+    flex-direction: column;
+    /* Vertikalt flöde: överst header, sen main och längst ned footer */
 }
 header {
     margin-top: 30px;
 }
 main {
-    display: flex; /* Aktivera flexbox */
-    flex-direction: row; /* Horisontellt flöde: .innehall och aside brevid varandra */
-    justify-content: space-between; /* Sprid ut .innehall till vänster och aside till höger med ett mellanrum emellan */
+    display: flex;
+    /* Aktivera flexbox */
+    flex-direction: row;
+    /* Horisontellt flöde: .innehall och aside brevid varandra */
+    justify-content: space-between;
+    /* Sprid ut .innehall till vänster och aside till höger med ett mellanrum emellan */
 }
 .innehall {
     width: 650px;
 }
 aside {
-	width: 280px;
+    width: 280px;
 }
 footer {
     margin-bottom: 30px;
 }
 
-/* För mindre skärmar gör innehållets layout vertikal */
+/* För fönster mindre än 960px */
+
 @media (max-width: 1000px) {
-    /* Återställ hela bredden till fri */
     .kontainer {
         width: auto;
         padding: 20px;
     }
+    .innehall {
+        width: 66%;
+    }
+    aside {
+        width: 30%;
+    }
+}
+
+/* För mindre skärmar gör innehållets layout vertikal */
+
+@media (max-width: 650px) {
     /* Vertikalt flöde: först .innehall sen aside under */
     main {
         flex-direction: column;
     }
     /* Återställ bredderna till fri */
-    header, .innehall, aside, footer {
+    header,
+    .innehall,
+    aside,
+    footer {
         width: auto;
     }
 }
@@ -98,94 +129,119 @@ footer {
 /*******************************************************
 Sidans rubrik
 *******************************************************/
+
 header hgroup {
-    font-family: 'Sonsie One', cursive; /* typsnitt */
-	color: #fff; /* textfärg */
+    font-family: 'Sonsie One', cursive;
+    /* typsnitt */
+    color: #fff;
+    /* textfärg */
 }
 header h1 {
-	font-size: 4em; /* textstorlek */
-	text-shadow: 0 -2px 0 rgba(0,0,0,.5);
+    font-size: 4em;
+    /* textstorlek */
+    text-shadow: 0 -2px 0 rgba(0, 0, 0, .5);
 }
 
 /* Utseende på beskrivningstexten */
+
 header h2 {
-	font-size: 1.5em; /* textstorlek */
-	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    font-size: 1.5em;
+    /* textstorlek */
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
 }
 
 /******************************************************
 Sidans meny
 *******************************************************/
+
 header ul {
-	margin: 20px 0;
-	background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C */
-	border-radius: 5px; /* runda hörn */
-	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 1px rgba(0,0,0,.4); /* skugga */
+    margin: 20px 0;
+    background: linear-gradient(to bottom, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+    /* W3C */
+    border-radius: 5px;
+    /* runda hörn */
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), 0 1px 1px rgba(0, 0, 0, .4);
+    /* skugga */
 }
 header li {
-	list-style: none;
-	display: inline-block;
+    list-style: none;
+    display: inline-block;
 }
 header li:first-child {
-	margin-left: 10px;
+    margin-left: 10px;
 }
 header nav a {
-	font-weight: bold;
-	color: #fff; /* textfärg */
-	display: inline-block;
-	padding: 10px 15px;
-	text-decoration: none;
-	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    font-weight: bold;
+    color: #fff;
+    /* textfärg */
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
 }
-/* Menyn när du för muspekaren över */
-header nav a:hover {
-	background: linear-gradient(to bottom,  #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%); /* W3C */
 
+/* Menyn när du för muspekaren över */
+
+header nav a:hover {
+    background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+    /* W3C */
 }
+
 /* Menyn för vald sida */
+
 header nav .aktiv {
-	background: linear-gradient(to bottom, #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* W3C */
+    background: linear-gradient(to bottom, #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%);
+    /* W3C */
 }
 
 /******************************************************
 Sidan innehåll
 *******************************************************/
 
+
 /* Utseende på inlägg */
+
 article {
-	margin-bottom: 40px;
-	background: #fff; /* bakgrundsfärg*/
-	padding: 20px 35px;
-	border-radius: 8px; /* runda hörn */
-	box-shadow: 0 1px 3px rgba(0,0,0,.4); /* skugga */
+    margin-bottom: 40px;
+    background: #fff;
+    /* bakgrundsfärg*/
+    padding: 20px 35px;
+    border-radius: 8px;
+    /* runda hörn */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    /* skugga */
 }
 article h3 {
     font-size: 2em;
 }
 article .datum {
-	margin: 0 0 20px;
-	font-size: 0.9em;
+    margin: 0 0 20px;
+    font-size: 0.9em;
 }
 
 /* Utseende på bilder i inlägget */
+
 article .bild {
     width: 70%;
-	margin: 20px auto;
-	padding: 15px;
-	border: 1px solid #AAA;
-	text-align: center;
-	display: block;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #AAA;
+    text-align: center;
+    display: block;
 }
 
 /*******************************************************
 Sidans sidkolumn
 *******************************************************/
+
 .ruta {
-	background: #fff;
-	margin: 0 0 30px;
-	padding: 20px;
-	border-radius: 8px; /* Runda hörn */
-	box-shadow: 0 1px 3px rgba(0,0,0,.4); /* Skugga */
+    background: #fff;
+    margin: 0 0 30px;
+    padding: 20px;
+    border-radius: 8px;
+    /* Runda hörn */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    /* Skugga */
 }
 .ruta h4 {
     font-size: 1.5em;
@@ -200,11 +256,15 @@ Sidans sidkolumn
 /*******************************************************
 Sidans sidfot
 *******************************************************/
+
 footer {
-    background: rgba(255, 255, 255, 0.3); /* bakgrundsfärg*/
-	padding: 20px 35px;
-	color: #FFF; /* textfärg */
-    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-    border-radius: 8px; /* runda hörn */
+    background: rgba(255, 255, 255, 0.3);
+    /* bakgrundsfärg*/
+    padding: 20px 35px;
+    color: #FFF;
+    /* textfärg */
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
+    border-radius: 8px;
+    /* runda hörn */
     border: 1px solid rgba(255, 255, 255, 0.51);
 }
