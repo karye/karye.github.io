@@ -1,21 +1,23 @@
 /*******************************************************
 Reset-regel
 *******************************************************/
+
 html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
 dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
 a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
 strong, sub, sup, tt, var, legend, fieldset {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 img, fieldset {
-	border: 0;
+    border: 0;
 }
 
-/* Alla html5 elements till block. Fix för IE. */
+/* Alla HTML5 elements till block. Fix för IE. */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
-	display: block;
+    display: block;
 }
+
 /*******************************************************
 Allmänna styling regler
 *******************************************************/
@@ -30,12 +32,7 @@ body {
 
 /* Utseende på rubriker */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     line-height: 1.6em;
 }
 
@@ -96,7 +93,6 @@ footer {
 }
 
 /* För fönster mindre än 960px */
-
 @media (max-width: 1000px) {
     .kontainer {
         width: auto;
@@ -111,7 +107,6 @@ footer {
 }
 
 /* För mindre skärmar gör innehållets layout vertikal */
-
 @media (max-width: 650px) {
     /* Vertikalt flöde: först .innehall sen aside under */
     main {
@@ -143,7 +138,6 @@ header h1 {
 }
 
 /* Utseende på beskrivningstexten */
-
 header h2 {
     font-size: 1.5em;
     /* textstorlek */
@@ -181,14 +175,12 @@ header nav a {
 }
 
 /* Menyn när du för muspekaren över */
-
 header nav a:hover {
     background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
     /* W3C */
 }
 
 /* Menyn för vald sida */
-
 header nav .aktiv {
     background: linear-gradient(to bottom, #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%);
     /* W3C */
@@ -198,9 +190,7 @@ header nav .aktiv {
 Sidan innehåll
 *******************************************************/
 
-
 /* Utseende på inlägg */
-
 article {
     margin-bottom: 40px;
     background: #fff;
@@ -220,7 +210,6 @@ article .datum {
 }
 
 /* Utseende på bilder i inlägget */
-
 article .bild {
     width: 70%;
     margin: 20px auto;
