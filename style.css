@@ -1,195 +1,350 @@
-/*******************************************************
-Reset-regel
-*******************************************************/
-
-html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
-dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
-a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
-strong, sub, sup, tt, var, legend, fieldset {
+/* css-reset */
+html{
+    box-sizing: border-box;
+}
+¨*, *:before, *:after{
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul{
     margin: 0;
     padding: 0;
 }
-img, fieldset {
-    border: 0;
-}
-
-/* Alla HTML5 elements till block. Fix för IE. */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
-    display: block;
-}
-
-/*******************************************************
-Allmänna styling regler
-*******************************************************/
 
 body {
-    background: url(http://upload.wikimedia.org/wikipedia/commons/3/36/FRIM_canopy.JPG);
-    /* sidans bakgrundsbild */
+    background-image: url(Bilder/Bakground.jpg);
     background-attachment: fixed;
-    font: .81em/150% 'Open sans', Helvetica, sans-serif;
-    color: #666;
+    background-repeat: repeat;
+
 }
 
-/* Utseende på rubriker */
+@media only screen and (min-width: 1000px) {
 
-h1, h2, h3, h4, h5, h6 {
-    line-height: 1.6em;
+
+
 }
 
-/* Utseende på länkar */
+/* Layout */
+.wrapper {
+    width: 90%;
+    max-width: 1000px;
+    min-width: 640px;
+    min-height: 200px;
 
-a {
-    color: #026acb;
-    text-decoration: none;
-    outline: none;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+
 }
 
-/* Utseende på textstycken */
+/* Header / Layout */
+header {
+    height: 200px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
 
-p {
-    margin: 0 0 1.2em;
-    padding: 0;
-}
-
-/* Bilders bredd till 100% */
-
-img {
-    width: 100%;
 }
 
-/*******************************************************
-Sidans rubrik
-*******************************************************/
-
-header hgroup {
-    font-family: 'Sonsie One', cursive;
-    /* typsnitt */
-    color: #fff;
-    /* textfärg */
-}
-header h1 {
-    font-size: 4em;
-    /* textstorlek */
-    text-shadow: 0 -2px 0 rgba(0, 0, 0, .5);
+.logo {
+    width: 25%;
+    float: left;
 }
 
-/* Utseende på beskrivningstexten */
-header h2 {
-    font-size: 1.5em;
-    /* textstorlek */
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
-}
-
-/******************************************************
-Sidans meny
-*******************************************************/
-
-header ul {
-    margin: 20px 0;
-    background: linear-gradient(to bottom, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
-    /* W3C */
-    border-radius: 5px;
-    /* runda hörn */
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), 0 1px 1px rgba(0, 0, 0, .4);
-    /* skugga */
-}
-header li {
-    list-style: none;
-    display: inline-block;
-}
-header li:first-child {
-    margin-left: 10px;
-}
-header nav a {
-    font-weight: bold;
-    color: #fff;
-    /* textfärg */
-    display: inline-block;
-    padding: 10px 15px;
-    text-decoration: none;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
-}
-
-/* Menyn när du för muspekaren över */
-header nav a:hover {
-    background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
-    /* W3C */
-}
-
-/* Menyn för vald sida */
-header nav .aktiv {
-    background: linear-gradient(to bottom, #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%);
-    /* W3C */
-}
-
-/******************************************************
-Sidan innehåll
-*******************************************************/
-
-/* Utseende på inlägg */
-article {
-    margin-bottom: 40px;
-    background: #fff;
-    /* bakgrundsfärg*/
-    padding: 20px 35px;
-    border-radius: 8px;
-    /* runda hörn */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
-    /* skugga */
-}
-article h3 {
-    font-size: 2em;
-}
-article .datum {
-    margin: 0 0 20px;
-    font-size: 0.9em;
-}
-
-/* Utseende på bilder i inlägget */
-article .bild {
-    width: 70%;
-    margin: 20px auto;
-    padding: 15px;
-    border: 1px solid #AAA;
-    text-align: center;
+.logo img{
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 150px;
+    border-radius: 1000px;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+
+    margin-top: 25px;
 }
 
-/*******************************************************
-Sidans sidkolumn
-*******************************************************/
+nav.meny {
 
-.ruta {
-    background: #fff;
-    margin: 0 0 30px;
-    padding: 20px;
-    border-radius: 8px;
-    /* Runda hörn */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
-    /* Skugga */
-}
-.ruta h4 {
-    font-size: 1.5em;
-}
-.ruta dd {
-    font-weight: bold;
-}
-.ruta dt {
-    margin-left: 80px;
+    width: 75%;
+    height: 200px;
+    float: right;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+
 }
 
-/*******************************************************
-Sidans sidfot
-*******************************************************/
-
-footer {
-    background: rgba(255, 255, 255, 0.3);
-    /* bakgrundsfärg*/
-    padding: 20px 35px;
-    color: #FFF;
-    /* textfärg */
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
-    border-radius: 8px;
-    /* runda hörn */
-    border: 1px solid rgba(255, 255, 255, 0.51);
+.gradient {
+    background-color: #e6ffff;
+    background-image: linear-gradient(to top, #108fed, #e6ffff);
+    background-image: -webkit-linear-gradient(to top, #108fed, #e6ffff);
 }
+
+/* -------- Länkar / Meny -------- */
+nav {}
+
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    nav li {
+        display: inline;
+        margin-left: 10px;
+
+    }
+
+    nav a {
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 5px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+
+        background-color: #108fed;
+        color:white;
+    }
+
+    nav a:hover {
+        font-size: 14px;
+        background: #e6ffff;
+        color: #000000;
+    }
+
+    /* Text Layout */
+
+    h1 {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-family: 'Indie Flower', cursive;
+    }
+
+    h2 {
+        margin-left: 2.2%;
+        font-size: 20px;
+        font-family: 'Bubbler One', sans-serif;
+    }
+
+    p {
+        margin-left: 2.2%;
+        margin-right: 2.2%
+        font-family: 'Indie Flower', cursive;
+    }
+
+    main mark {
+        background-color: #e6ffff;
+        color: deepskyblue;
+        border-radius: 2px;
+    }
+
+    main a{    color: deepskyblue;
+    }
+
+
+
+    /*-------- Main Layout ---------*/
+
+    .home {
+        width: 90%;
+        max-width: 1000px;
+        min-width: 700px;
+        min-height: 700px;
+        background: #e6ffff;
+        padding-bottom: 20px;
+
+
+        margin: 20px auto 10px auto;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+
+        padding-top: 5px;
+    }
+
+    main {}
+
+        .pic {}
+
+            .pic img {
+                width: 20%;
+                margin: 6%;
+                display: inline-block;
+
+            }
+
+            .pic img:hover {
+                -moz-transform: scaleX(-1);
+                -o-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                filter: FlipH;
+                -ms-filter: "FlipH";
+            }
+
+            table {
+                margin-left: 2.2%;
+                margin-bottom: 10px;
+            }
+
+            form {
+                margin-left: 2.2%;
+            }
+
+            /*-------------------------------------------- Harajuku -----*/
+
+            .harajuku {
+
+            }
+
+            .bildspel {
+                width: 90%;
+                max-width: 1000px;
+                min-width: 640px;
+                min-height: 900px;
+                background: #e6ffff;
+
+                margin-left: auto;
+                margin-right: auto;
+                padding: 2.2%;
+                margin-top: 20px;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+            }
+
+            .bildspel img {
+                width: 500px;
+                height: 500px;
+            }
+            /*-------------------------------------------- Akihabar -----*/
+
+            .akihabara {
+                width: 90%;
+                max-width: 1000px;
+                min-width: 640px;
+                min-height: 900px;
+                background: #e6ffff;
+
+                margin-left: auto;
+                margin-right: auto;
+                padding: 2.2%;
+                margin-top: 20px;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+            }
+
+            .bildspel {
+                width: 90%;
+                max-width: 1000px;
+                min-width: 640px;
+                min-height: 900px;
+                background: #ff98c0;
+
+                margin-left: auto;
+                margin-right: auto;
+                padding: 2.2%;
+                margin-top: 20px;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+            }
+
+
+        }
+
+        .flex-container {
+            display: flex;
+            background: white;
+            flex-wrap: wrap-reverse;
+        }
+
+        .karta {
+            max-width: 300px;
+            min-height: 400px;
+            flex-grow: 2;
+            margin: 10px
+        }
+
+        .scrolbar {
+            max-width: 280px;
+            min-width: 130px;
+            height: 300px;
+            flex-grow: 1;
+            margin: 10px;
+        }
+
+        /* ----------------------------------------- Shinjuku --------*/
+
+        .shinjuku {
+            width: 90%;
+            max-width: 1000px;
+            min-width: 700px;
+            min-height: 700px;
+            background: #e6ffff;
+            padding-bottom: 20px;
+
+
+            margin: 20px auto 10px auto;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+
+            padding: 3%;
+        }
+
+        .css3box {
+            background: ;
+            color: #f0ffff;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .css3box img {
+            width: 30%;
+            display: inline-flex;
+            margin: 1%;
+
+        }
+
+        .css3box img:hover {
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+
+        iframe {
+            display: block;
+            margin: 15px auto 15px auto;
+
+        }
+
+
+        /*Footer*/
+
+        .bottom {
+            height: 50px;
+        }
+        .bottom footer {
+            background: white;
+            margin-top: 50px;
+
+
+        }
+        footer p {
+            text-align: center;
+        }
+        footer a {
+
+        }
