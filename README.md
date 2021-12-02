@@ -16,3 +16,13 @@ x
  xvc
   x
   cv
+   fvd 
+   vf
+   df vdf
+   v d
+   vd
+   f
+   d
+    fvd
+    fv
+    d
